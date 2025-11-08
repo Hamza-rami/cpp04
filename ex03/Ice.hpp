@@ -2,6 +2,7 @@
 #define ICE_HPP
 
 #include "AMateria.hpp"
+#include <iostream>
 
 class Ice : public AMateria
 {
@@ -11,8 +12,8 @@ public:
     Ice& operator=(const Ice& other);
     virtual ~Ice();
 
-    virtual AMateria* clone() const;
-    virtual void use(ICharacter& target);
+    AMateria* clone() const;
+    void use(ICharacter& target);
 };
 
 #endif

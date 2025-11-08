@@ -8,7 +8,7 @@ class Character : public ICharacter
 {
 private:
     std::string name;
-    AMateria* inventory[4]; // Each slot holds a Materia or NULL
+    AMateria* inventory[4];
 
 public:
     Character(std::string const & name);
