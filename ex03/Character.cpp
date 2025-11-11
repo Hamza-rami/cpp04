@@ -1,5 +1,12 @@
 #include "Character.hpp"
 
+Character::Character()
+{
+    this->name = "default";
+    for (int i = 0; i < 4; i++)
+        inventory[i] = NULL;
+}
+
 Character::Character(std::string const & name) : name(name)
 {
     for (int i = 0; i < 4; i++)
@@ -59,6 +66,8 @@ void Character::equip(AMateria* m)
 
     for (int i = 0; i < 4; i++)
     {
+        if (inventory[i] == m)
+            return ;
         if (!inventory[i])
         {
             inventory[i] = m;

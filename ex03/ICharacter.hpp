@@ -2,6 +2,7 @@
 #define ICHARATER_HPP
 
 #include <string>
+
 class AMateria;
 
 class ICharacter
